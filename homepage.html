@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Tinyboard</title>
+        <style type="text/css">
+            body{
+                margin:40px auto;
+                max-width:650px;
+                line-height:1.6;
+                font-size:18px;
+                color:#444;
+                padding:0 10px
+            }
+            h1,h2,h3{
+                line-height:1.2
+            }
+            textarea{
+              width:100%;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>Tinyboard</h1>
+        <form action="/newpost" method ="post">
+            Your name:
+            <input type="text" name="username"><br>
+            Your post:<br>
+             <textarea name="message" rows="10" width="100%"></textarea>
+            <br><br>
+            <input type="submit" value="Post!">
+        </form>
+        <hr>
+        <h2>Last five posts:</h2>
+        <object name="foo" type="text/html" data="/posts/5" style="width:100%; height:350px"></object>
+        <hr>
+        <a href="/posts">View all posts</a>
+    </body>
+</html>
